@@ -14,7 +14,27 @@ export default function Home({ file, preview }) {
 
   const formOptions = {
     label: 'Home Page',
-    fields: [{ name: 'title', component: 'text' }],
+    fields: [
+      { name: 'title1',
+       component: 'text'
+      },
+      { name: 'article1',
+       component: 'textarea'
+      },
+      { name: 'title2',
+       component: 'text'
+      },
+      { name: 'article2',
+       component: 'textarea'
+      },
+      { name: 'title3',
+       component: 'text'
+      },
+      { name: 'article3',
+       component: 'textarea'
+      }
+    
+    ],
   }
 
   /*
@@ -37,13 +57,45 @@ export default function Home({ file, preview }) {
           {/*
            ** Render the title from `home.json`
            */}
-          {data.title}
+          {data.title1}
         </h1>
 
+        <p className="description">
+          {/*
+           ** Render the title from `home.json`
+           */}
+          {data.article1}
+        </p>
 
+        <h1 className="title">
+          {/*
+           ** Render the title from `home.json`
+           */}
+          {data.title2}
+        </h1>
 
+        <p className="description">
+          {/*
+           ** Render the title from `home.json`
+           */}
+          {data.article2}
+        </p>
 
-        
+        <h1 className="title">
+          {/*
+           ** Render the title from `home.json`
+           */}
+          {data.title3}
+        </h1>
+
+        <p className="description">
+          {/*
+           ** Render the title from `home.json`
+           */}
+          {data.article3}
+        </p>
+     
+       
       </main>
 
       <footer>
