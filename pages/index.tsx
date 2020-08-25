@@ -40,12 +40,6 @@ export default function Home({ file, preview }) {
           {data.title}
         </h1>
 
-        <p className="article">
-          {/*
-           ** Render the article from `home.json`
-           */}
-          {data.article}
-        </p>
 
 
 
