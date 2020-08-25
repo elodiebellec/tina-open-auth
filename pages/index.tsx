@@ -53,33 +53,44 @@ export default function Home({ file, preview }) {
       </Head>
 
       <main>
-        <h1 className="title">
-          {/*
-           ** Render the title from `home.json`
-           */}
-          {data.title1}
-        </h1>
+        <div className="mainTitle">
+          <h1 className="title">
+            {/*
+            ** Render the title from `home.json`
+            */}
+            {data.title1}
+          </h1>
 
-        <p className="description">
-          {/*
-           ** Render the title from `home.json`
-           */}
-          {data.article1}
-        </p>
+          <p className="description">
+            {/*
+            ** Render the title from `home.json`
+            */}
+            {data.article1}
+          </p>
+        </div>
 
-        <h1 className="title">
-          {/*
-           ** Render the title from `home.json`
-           */}
-          {data.title2}
-        </h1>
+        <div className="part1">
+          <h1 className="title">
+            {/*
+            ** Render the title from `home.json`
+            */}
+            {data.title2}
+          </h1>
 
-        <p className="description">
-          {/*
-           ** Render the title from `home.json`
-           */}
-          {data.article2}
-        </p>
+          <p className="description">
+            {/*
+            ** Render the title from `home.json`
+            */}
+            {data.article2a}
+          </p>
+
+          <p className="description">
+            {/*
+            ** Render the title from `home.json`
+            */}
+            {data.article2b}
+          </p>
+        </div>
 
         <h1 className="title">
           {/*
@@ -109,28 +120,42 @@ export default function Home({ file, preview }) {
       </footer>
 
       <style jsx>{`
+       
         .container {
           min-height: 100vh;
-          padding: 0 0.5rem;
+          padding: 0;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          background-color: black;
+
         }
 
         main {
-          padding: 5rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          justify-content: justify;
+          align-items: left;
+         }
+
+        .mainTitle {
+          padding: 10rem 30rem 10rem 5rem;
+          background-image: url("https://www.monchat.ca/wp-content/uploads/2020/03/fond-d-ecran-chat-noir-de-profil-sur-fond-noir.jpg");
         }
 
+        .part1 {
+          padding: 10rem 40rem 15rem 10rem;
+          background-image: url("https://www.angelxp.eu/windows/wide/animaux/animaux/Chat13.jpg");
+        }
+
+
+         
         footer {
           width: 100%;
           height: 100px;
-          border-top: 1px solid #eaeaea;
+          border-top: 1px solid black;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -152,7 +177,7 @@ export default function Home({ file, preview }) {
         }
 
         .title a {
-          color: #0070f3;
+          color: white;
           text-decoration: none;
         }
 
@@ -165,18 +190,37 @@ export default function Home({ file, preview }) {
         .title {
           margin: 0;
           line-height: 1.15;
-          font-size: 4rem;
-          color: ${preview && 'red'};
+          font-size: 5rem;
+          color: white;          
+        }
+
+        .preview {
+          ${preview && 'red'};
         }
 
         .title,
         .description {
-          text-align: center;
+          text-align: left;
+
         }
+
 
         .description {
           line-height: 1.5;
           font-size: 1.5rem;
+          color: white;
+        }
+
+        .mainTitle .description{
+          line-height: 1.5;
+          font-size: 1.5rem;
+          color: #f8dbab;
+        }
+
+        .part1 .description{
+          line-height: 1.5;
+          font-size: 1.5rem;
+          color: #DEE0EC;
         }
 
         code {

@@ -2,7 +2,8 @@
   "title1": "So yes, Framer is on the web.",
   "article1": "And it’s got all the team collaboration features you’d expect from a high-fidelity prototyping tool: multi-player editing, easy sharing, inline commenting, reusable components, and developer handoff. But let’s cut right to what makes this the best prototyping tool on the market.",
   "title2": "An advanced prototyping tool, minus the code.",
-  "article2": "So how does it work? Import from any of your favorite\nUI design tools or start from scratch in Framer. Simply right-click to swap out static elements and replace them with interactive components.",
+  "article2a": "So how does it work? Import from any of your favorite",
+  "article2b": "UI design tools or start from scratch in Framer. Simply right-click to swap out static elements and replace them with interactive components.",
   "title3": "Motion that works like magic.",
   "article3": "Ready to design your first animation? Drag and drop with Magic Motion to create immersive prototypes. Just use the connector to draw a link between elements on the canvas. Manipulate size or position and Framer figures out everything else.\n\nDraw simple card animations or compose complex prototypes. The best part? Nothing you design is throwaway. Of all prototyping tools, Framer is the only one outputs animation values that can be used 1:1 in production."
 }
