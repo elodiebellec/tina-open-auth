@@ -1,6 +1,9 @@
 import App from 'next/app'
 import { TinaCMS, TinaProvider } from 'tinacms'
 import { GithubClient, TinacmsGithubProvider } from 'react-tinacms-github'
+import { ThemeProvider, ColorModeProvider, CSSReset } from '@chakra-ui/core'
+import theme from "../theme"
+
 
 export default class Site extends App {
   cms: TinaCMS
@@ -47,7 +50,12 @@ export default class Site extends App {
            * 5. Add a button for entering Preview/Edit Mode
            */}
           <EditLink cms={this.cms} />
-          <Component {...pageProps} />
+          <ThemeProvider theme={theme}>
+            <ColorModeProvider value="dark">
+              <CSSReset />
+              <Component {...pageProps} />
+            </ColorModeProvider>
+          </ThemeProvider>
         </TinacmsGithubProvider>
       </TinaProvider>
     )
@@ -64,6 +72,7 @@ const onLogin = async () => {
 
   const resp = await fetch(`/api/preview`, { headers: headers })
   const data = await resp.json()
+  
 
   if (resp.status == 200) window.location.href = window.location.pathname
   else throw new Error(data.message)

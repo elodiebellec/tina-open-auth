@@ -33,3 +33,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+
+## Change the sidebar font color
+
+With Chakra UI dark theme, this sidebar font is white on a white background so unreadable. To change the sidebar font color,go to index.tsx file, add a black font color in <style jsx global>.

@@ -1,4 +1,12 @@
 import Head from 'next/head'
+import {
+  Button,
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Image
+} from '@chakra-ui/core'
 /*
  ** Import helpers and GetStaticProps type
  */
@@ -9,6 +17,10 @@ import {
 } from 'react-tinacms-github'
 import { usePlugin } from 'tinacms'
 import { GetStaticProps } from 'next'
+
+
+
+
 
 export default function Home({ file, preview }) {
 
@@ -40,117 +52,134 @@ export default function Home({ file, preview }) {
   /*
    ** Register a JSON Tina Form
    */
-  const [data, form] = useGithubJsonForm(file, formOptions)
+
+  
+  const [data, form] = useGithubJsonForm(file, formOptions);
+
   usePlugin(form)
+
+
+
 
   useGithubToolbarPlugins()
 
   return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+  
+  <div>
+    <Box
+      backgroundColor="black"
+      color="white"
+      >
 
-      <main>
-        <div className="mainTitle">
-          <h1 className="title">
-            {/*
-            ** Render the title from `home.json`
-            */}
-            {data.title1}
-          </h1>
+    <Head>
+      
+    </Head>
 
-          <p className="description">
-            {/*
-            ** Render the title from `home.json`
-            */}
-            {data.article1}
-          </p>
-        </div>
-
-        <div className="part1">
-          <h1 className="title">
-            {/*
-            ** Render the title from `home.json`
-            */}
-            {data.title2}
-          </h1>
-
-          <p className="description">
-            {/*
-            ** Render the title from `home.json`
-            */}
-            {data.article2a}
-          </p>
-
-          <p className="description">
-            {/*
-            ** Render the title from `home.json`
-            */}
-            {data.article2b}
-          </p>
-        </div>
-
-        <h1 className="title">
-          {/*
-           ** Render the title from `home.json`
-           */}
-          {data.title3}
-        </h1>
-
-        <p className="description">
-          {/*
-           ** Render the title from `home.json`
-           */}
-          {data.article3}
-        </p>
-     
-       
-      </main>
-
-      <footer>
-        <a
-          href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+    <main>
+      <Box 
+        height="600px"
+        width="100%"
+        backgroundImage="url('https://images.wagwalkingweb.com/media/daily_wag/sense_guides/what-can-dogs-see-in-the-dark/hero/what-can-dogs-see-in-the-dark_oANYshk.jpg')"
+        backgroundPosition="right"
+        backgroundRepeat="no-repeat"
+        m={[2, 4, 6, 8]}
+        p={[2, 4, 6, 8]}
+      >
+        <Box
+          width="45%"
         >
-          Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
-        </a>
-      </footer>
+        <Heading
+          fontSize={["xl", "2xl", "4xl", "6xl"]}
+          p={[1, 2, 3, 4]}>        
+          {data.title1}
+        </Heading>
 
-      <style jsx>{`
+        <Text
+          fontSize={["sm", "md", "lg", "xl"]}
+          p={[1, 2, 3, 4]}
+          color="#FBD38D"       
+        >
+          {data.article1}
+        </Text>
+        </Box>
+        
+      </Box>
+
+      <Box 
+        height="600px"
+        width="100%"
+        m={[2, 4, 6, 8]}
+        p={[2, 4, 6, 8]}
+      >
+        <Box
+          pl="50%"
+          pr="10%"
+
+        >
+        <Heading
+          fontSize={["xl", "2xl", "4xl", "6xl"]}
+          p={[1, 2, 3, 4]}>          
+          {data.title2}
+        </Heading>
+
+        <Text
+          fontSize={["sm", "md", "lg", "xl"]}
+          p={[1, 2, 3, 4]}
+          color="#EDF2F7"       
+        >
+          {data.article2a}
+        </Text>
+        <Text
+          fontSize={["sm", "md", "lg", "xl"]}
+          p={[1, 2, 3, 4]}
+          color="#EDF2F7"       
+        >
+          {data.article2b}
+        </Text>
+        </Box>
+        
+      </Box>
+
+      <Box 
+        height="600px"
+        width="100%"
+        m={[2, 4, 6, 8]}
+        p={[2, 4, 6, 8]}
+      >
+        <Box
+          width="45%"
+        >
+        <Heading
+          fontSize={["xl", "2xl", "4xl", "6xl"]}
+          p={[1, 2, 3, 4]}>         
+          {data.title3}
+        </Heading>
+
+        <Text
+          fontSize={["sm", "md", "lg", "xl"]}
+          p={[1, 2, 3, 4]}
+          color="#CEEDFF"       
+        >
+          {data.article3}
+        </Text>
+        </Box>
+        
+      </Box>
        
-        .container {
-          min-height: 100vh;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          background-color: black;
+    </main>
 
-        }
+    <footer>
+      <a
+        href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
+      </a>
+    </footer>
 
-        main {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: justify;
-          align-items: left;
-         }
-
-        .mainTitle {
-          padding: 10rem 30rem 10rem 5rem;
-          background-image: url("https://www.monchat.ca/wp-content/uploads/2020/03/fond-d-ecran-chat-noir-de-profil-sur-fond-noir.jpg");
-        }
-
-        .part1 {
-          padding: 10rem 40rem 15rem 10rem;
-          background-image: url("https://www.angelxp.eu/windows/wide/animaux/animaux/Chat13.jpg");
-        }
-
-
+    <style jsx>{`
+       
          
         footer {
           width: 100%;
@@ -187,41 +216,12 @@ export default function Home({ file, preview }) {
           text-decoration: underline;
         }
 
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 5rem;
-          color: white;          
-        }
-
+       
         .preview {
           ${preview && 'red'};
         }
 
-        .title,
-        .description {
-          text-align: left;
-
-        }
-
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-          color: white;
-        }
-
-        .mainTitle .description{
-          line-height: 1.5;
-          font-size: 1.5rem;
-          color: #f8dbab;
-        }
-
-        .part1 .description{
-          line-height: 1.5;
-          font-size: 1.5rem;
-          color: #DEE0EC;
-        }
+      
 
         code {
           background: #fafafa;
@@ -280,11 +280,13 @@ export default function Home({ file, preview }) {
         }
       `}</style>
 
-      <style jsx global>{`
+<style jsx global>{`
         html,
         body {
           padding: 0;
           margin: 0;
+          background-color: black;
+          color: grey;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
@@ -294,7 +296,9 @@ export default function Home({ file, preview }) {
           box-sizing: border-box;
         }
       `}</style>
-    </div>
+    </Box>
+  </div>
+   
   )
 }
 
