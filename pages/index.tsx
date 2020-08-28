@@ -5,7 +5,10 @@ import {
   Flex,
   Heading,
   Text,
-  Image
+  Image,
+  Stack,
+  Divider,
+  Link
 } from '@chakra-ui/core'
 /*
  ** Import helpers and GetStaticProps type
@@ -17,6 +20,10 @@ import {
 } from 'react-tinacms-github'
 import { usePlugin } from 'tinacms'
 import { GetStaticProps } from 'next'
+import { BiBone } from "react-icons/bi"
+import { FaTwitter, FaFacebook, FaGithub, FaLinkedin} from "react-icons/fa"
+import { SiRiot } from "react-icons/si"
+import { FaPaw } from "react-icons/fa"
 
 
 
@@ -66,236 +73,296 @@ export default function Home({ file, preview }) {
   return (
   
   <div>
+      <head>
+      
+      </head>
+      
+
     <Box
       backgroundColor="black"
       color="white"
+      pl="10%"
+      pr="10%"
       >
 
-    <Head>
+      <header>
+        <Flex mb="5%">          
+            <Box width={['0%', 0.6, 0.6]} pt="1%">
+              <Box as={FaPaw} fontSize={["0", "2xl", "3xl", "5xl"]} color="acert_red"/>
+            </Box>
+            <Box position="absolute" right="10%">
+              <Heading textTransform="uppercase" fontSize={["0", "xs", "md", "xl"]} pt="5%">
+                Nextgen identity & access management
+              </Heading>
+            </Box>
+            <Box width={["100%", 0, 0]} pb="5%" pt="2%">
+              <Stack isInline align="left">
+                  <Box as={FaPaw} fontSize={["xl", "0", "0", "0"]} color="acert_red"/>
+                <Heading  textTransform="uppercase" fontSize={["xs", "0", "0", "0"]} fontStyle="bold" pt="1%">
+                  Nextgen identity & access management
+                </Heading>
+              </Stack>
+            </Box>
+          </Flex>
+      </header>
       
-    </Head>
-
-    <main>
-      <Box 
-        height="600px"
-        width="100%"
-        backgroundImage="url('https://images.wagwalkingweb.com/media/daily_wag/sense_guides/what-can-dogs-see-in-the-dark/hero/what-can-dogs-see-in-the-dark_oANYshk.jpg')"
-        backgroundPosition="right"
-        backgroundRepeat="no-repeat"
-        m={[2, 4, 6, 8]}
-        p={[2, 4, 6, 8]}
-      >
-        <Box
-          width="45%"
+      <main>
+      
+{/*Article 1*/}
+        <Box 
+          height="100%"
+          width="100%"
+          p="5% 0% 10% 0%" 
+          display={{ md: "flex" }}
         >
-        <Heading
-          fontSize={["xl", "2xl", "4xl", "6xl"]}
-          p={[1, 2, 3, 4]}>        
-          {data.title1}
-        </Heading>
+          
+            <Box width={['100%', 0.8, 0.8]}>
+              <Heading  fontSize={["xl", "2xl", "4xl", "6xl"]}>     
+                {data.title1}
+              </Heading>
 
-        <Text
-          fontSize={["sm", "md", "lg", "xl"]}
-          p={[1, 2, 3, 4]}
-          color="#FBD38D"       
+              <Text  fontSize={["sm", "md", "lg", "xl"]} color="#FFFAFF"  pt="5%">
+                {data.article1}
+              </Text>
+            </Box>
+        
+{/*Image for middle and large screen size for article 1*/} 
+              <Box width={[0, '100%', '100%']}>
+                <Image src="\black-dog-in-the-dark.jpg" alt="black dog in the dark" />
+              </Box>      
+            </Box>
+
+{/*Image for middle and large screen size article 1*/} 
+            <Box width={['100%', 0, 0]}>
+              <Image src="\black-dog-in-the-dark.jpg" alt="black dog in the dark" />
+            </Box>
+
+
+{/*Article 2*/}
+        <Box height="100%" width="100%" p="5% 15% 5% 25%">
+          <Box width="100%">
+            <Heading fontSize={["xl", "2xl", "4xl", "6xl"]}>     
+              {data.title2}
+            </Heading>
+
+            <Text fontSize={["sm", "md", "lg", "xl"]} color="#FFFAFF" pt="5%">
+              {data.article2}
+            </Text>
+          </Box>
+        </Box>
+
+{/*Article 3*/}      
+        <Box 
+          height="100%"
+          width="100%"
+          p="5% 0% 10% 0%" 
+          display={{ md: "flex" }}
         >
-          {data.article1}
-        </Text>
+{/*Image for middle and large screen size article 3*/}       
+          <Box width={['0%', "100%", "100%"]}>
+            <Image src="https://us.123rf.com/450wm/damedeeso/damedeeso1609/damedeeso160900030/62512485-jack-russell-terrier-dog-isolated-on-black-dark-background-looking-at-you-frontal-isolated.jpg?ver=6" alt="A very sad russell terrier"/>
+          </Box>
+          
+{/*Text Article 3*/}
+          <Box width={['100%', 0.8, 0.8]}>
+            <Heading fontSize={["xl", "2xl", "4xl", "6xl"]}>     
+              {data.title3}
+            </Heading>
+
+            <Text fontSize={["sm", "md", "lg", "xl"]} color="#FFFAFF" pt="5%">
+              {data.article3}
+            </Text>
+          </Box>
+        </Box>
+
+
+{/*Image for small screen article 3*/}
+        <Box width={['100%', 0, 0]}>
+        <Image src="https://us.123rf.com/450wm/damedeeso/damedeeso1609/damedeeso160900030/62512485-jack-russell-terrier-dog-isolated-on-black-dark-background-looking-at-you-frontal-isolated.jpg?ver=6" alt="A very sad russell terrier" /> 
         </Box>
         
-      </Box>
 
-      <Box 
-        height="600px"
-        width="100%"
-        m={[2, 4, 6, 8]}
-        p={[2, 4, 6, 8]}
-      >
-        <Box
-          pl="50%"
-          pr="10%"
+{/*Article 4*/}
+        <Box 
+          height="100%"
+          width="100%"
+          p="5% 20% 5% 20%"           
+        >
+          <Box width="100%">
+            <Heading
+              fontSize={["xl", "2xl", "4xl", "6xl"]}
+            >     
+              {data.title4}
+            </Heading>
 
-        >
-        <Heading
-          fontSize={["xl", "2xl", "4xl", "6xl"]}
-          p={[1, 2, 3, 4]}>          
-          {data.title2}
-        </Heading>
-
-        <Text
-          fontSize={["sm", "md", "lg", "xl"]}
-          p={[1, 2, 3, 4]}
-          color="#EDF2F7"       
-        >
-          {data.article2a}
-        </Text>
-        <Text
-          fontSize={["sm", "md", "lg", "xl"]}
-          p={[1, 2, 3, 4]}
-          color="#EDF2F7"       
-        >
-          {data.article2b}
-        </Text>
+            <Text
+              fontSize={["sm", "md", "lg", "xl"]}
+              color="#FFFAFF"
+              pt="5%"      
+            >
+              {data.article4}
+            </Text>
+          </Box>
         </Box>
-        
+
+
+{/*Recommendation section for middle and large screen size*/}    
+      <Box w={[0, "100%", "100%", "100%"]} backgroundColor="#0f0f0F" borderWidth="1px" rounded="lg" borderColor="#0F0F0F" mt="15%">
+        <Box mb={[0, "5%", "5%", "5%"]} display={{base:"none", lg:"block"}} textAlign="center">
+            <Heading fontSize={[0, "xl", "3xl", "5xl"]}>They Recommend Us</Heading>
+          </Box>
+
+        <Stack mt={[0, "5%", "5%", "5%"]} justify="space-around" align="center">
+          
+        <Box display={{ md: "flex" }} fontSize={[0, "md", "lg", "xl"]} >
+            
+            <Box p={[0, "2%", "2%", "2%"]}>
+              <Image src="https://pbs.twimg.com/profile_images/964468428856872960/Mo11mN9b_400x400.jpg" alt="Fabien" rounded="full" w="180px" mx="auto"></Image>
+              <Text textAlign="center" >Fabien</Text>
+              <Text textAlign="center" color="acert_grey">CEO</Text>
+              <Text textAlign="center">Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome.</Text>
+            </Box>
+
+            <Box p={[0, "2%", "2%", "2%"]}>
+            <Image src="https://media-exp1.licdn.com/dms/image/C4D03AQHkci2rD306mw/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=fJ_iUaTVHajI120N_WG9_q_SXc1nN04CtgQZIsQoii8" alt="Smart trainee" rounded="full" w="180px" mx="auto"></Image>
+              <Text textAlign="center" >François</Text>
+              <Text textAlign="center" color="acert_grey">CEO</Text>
+              <Text textAlign="center">Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome.</Text>
+            </Box>
+
+            <Box p={[0, "2%", "2%", "2%"]} display={{base:"none", lg:"block"}}>
+              <Image src="\bernese-mountain-dog-wears-glasses.jpg" alt="Smart dog" rounded="full" w="180px" mx="auto"></Image>
+              <Text textAlign="center" >Bandit</Text>
+              <Text textAlign="center" color="acert_grey">CEO</Text>
+              <Text textAlign="center">Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome.</Text>
+            </Box>
+
+            <Box p={[0, "2%", "2%", "2%"]}>
+              <Image src="\Kevin-Mitnick-crop.jpg" alt="Kevin Mitnick" rounded="full"  w="180px" mx="auto"></Image>
+              <Text textAlign="center" >Kevin</Text>
+              <Text textAlign="center" color="acert_grey">CEO</Text>
+              <Text textAlign="center">Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome.</Text>
+            </Box>
+            
+          </Box>
+        </Stack>
       </Box>
 
+
+{/*Recommendation section for small screen size*/}
       <Box 
-        height="600px"
-        width="100%"
-        m={[2, 4, 6, 8]}
-        p={[2, 4, 6, 8]}
+        fontSize={["sm", 0, 0, 0]}
+        mb={['15%', "0%", "0%", "0%"]}
+        mt={['5%', "0%", "0%", "0%"]}
+        p={['5%', "0%", "0%", "0%"]}
+        borderWidth="1px" rounded="lg" borderColor="#0F0F0F"
       >
-        <Box
-          width="45%"
-        >
-        <Heading
-          fontSize={["xl", "2xl", "4xl", "6xl"]}
-          p={[1, 2, 3, 4]}>         
-          {data.title3}
-        </Heading>
+          <Box display={{base:"none", lg:"block"}} textAlign="center" pb={['10%', "0%", "0%", "0%"]}>
+            <Heading fontSize={["xl", 0, 0, 0]}>They Recommend Us</Heading>
+          </Box>
+                 
+          <Box display={{ md: "flex" }} mb={['5%', "0%", "0%", "0%"]}>
+            <Box pr={['5%', "0%", "0%", "0%"]} lineHeight="110%" textAlign="center" >
+              <Image src="https://pbs.twimg.com/profile_images/964468428856872960/Mo11mN9b_400x400.jpg" alt="Fabien" rounded="full" p={['1%', "0%", "0%", "0%"]} width={['200px', "0%", "0%", "0%"]} m="auto"></Image>
+              <Text>Fabien</Text>
+              <Text color="acert_grey">CEO</Text>
+            </Box>
+            <Box>
+              <Text>Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome.</Text>
+            </Box>
+          </Box>
 
-        <Text
-          fontSize={["sm", "md", "lg", "xl"]}
-          p={[1, 2, 3, 4]}
-          color="#CEEDFF"       
-        >
-          {data.article3}
-        </Text>
-        </Box>
-        
+          <Box display={{ md: "flex" }} mb={['5%', "0%", "0%", "0%"]}>
+            <Box pr={['5%', "0%", "0%", "0%"]} lineHeight="110%" textAlign="center" >
+              <Image src="https://media-exp1.licdn.com/dms/image/C4D03AQHkci2rD306mw/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=fJ_iUaTVHajI120N_WG9_q_SXc1nN04CtgQZIsQoii8" alt="Smart trainee" rounded="full" p={['1%', "0%", "0%", "0%"]} width={['200px', "0%", "0%", "0%"]} m="auto"></Image>
+              <Text>François</Text>
+              <Text color="acert_grey">CEO</Text>
+            </Box>
+            <Box>
+              <Text>Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome.</Text>
+            </Box>
+          </Box>
+
+          <Box display={{ md: "flex" }} mb={['5%', "0%", "0%", "0%"]}>
+            <Box pr={['5%', "0%", "0%", "0%"]} lineHeight="110%" textAlign="center" >
+              <Image src="\bernese-mountain-dog-wears-glasses.jpg" alt="Smart dog" rounded="full" p={['1%', "0%", "0%", "0%"]} width={['200px', "0%", "0%", "0%"]} m="auto"></Image>
+              <Text>Bandit</Text>
+              <Text color="acert_grey">CEO</Text>
+            </Box>
+            <Box>
+              <Text>Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome.</Text>
+            </Box>
+          </Box>
+
+          <Box display={{ md: "flex" }} mb={['5%', "0%", "0%", "0%"]}>
+            <Box pr={['5%', "0%", "0%", "0%"]} lineHeight="110%" textAlign="center" >
+              <Image src="\Kevin-Mitnick-crop.jpg" alt="Kevin Mitnick" rounded="full" p={['1%', "0%", "0%", "0%"]} width={["200px", "0%", "0%", "0%"]} m="auto"></Image>
+              <Text>Kevin</Text>
+              <Text color="grey">CEO</Text>
+            </Box>
+            <Box>
+              <Text>Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome.</Text>
+            </Box>
+          </Box>
+
       </Box>
-       
-    </main>
 
-    <footer>
-      <a
-        href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
-      </a>
-    </footer>
 
-    <style jsx>{`
-       
-         
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid black;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+{/*Small dog picture on the top of social medias*/}
+        <Box width={["65%", "40%", "25%"]} ml="auto" mr="auto" mt="10%" pr={["15%", "7%", "5%"]}>
+          <Image src="https://ekladata.com/9XM16UlLM0ntfHrK9wGzOQxB3Dw.jpg" alt="Dog with red collar" /> 
+        </Box>
 
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: white;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-       
-        .preview {
-          ${preview && 'red'};
-        }
+{/*Social medias*/}
+        <Stack w="100%" mt="3" justify="space-around" align="center" h="24">
+        <Box mb="2" display={{base:"none", lg:"block"}}>
+          <Text textTransform="uppercase" textAlign={{xs:"right", lg:"left"}}> Join the discussion</Text>
+        </Box>
+        <Stack isInline w="40%" justify="space-around">
+          <Link href="https://www.linkedin.com" >
+            <Box as={FaLinkedin} size="44px" mx={{xs:"1", lg:"3"}}/>
+          </Link>
+          <Link href="https://www.github.com">
+            <Box as={FaGithub} size="44px" mx={{xs:"1", lg:"3"}}/>
+          </Link>
+          <Link href="https://www.twitter.com">
+            <Box as={FaTwitter} size="44px" mx={{xs:"1", lg:"3"}}/>
+          </Link>
+          <Link href="https://www.riot.com">
+            <Box as={SiRiot} size="44px" mx={{xs:"1", lg:"3"}}/>
+          </Link>
+        </Stack>
+      </Stack>
 
       
 
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
+      </main>
 
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
+      <footer>
+        <Flex pt="10%" pb="2%" fontSize={["md", "lg", "xl", "2xl"]} >
+          <span>WOOF</span>
+          <Divider orientation="vertical" borderColor="white"/>
+          <span>the lovely companion of acert.io</span>       
+          <Box position="absolute" right="10%">
+            <Stack isInline fontSize={["0", "lg", "xl", "2xl"]}>
+              <Text>Made with </Text>
+              <Box as={BiBone} fontSize={["0", "xl", "2xl", "4xl"]}/>
+            </Stack>       
+          </Box>
+        </Flex>
+        
+             
+          <Box pb={['5%', "0%", "0%", "0%"]}>
+            <Stack isInline fontSize={["md", "0", "0", "0"]}>
+              <Text>Made with </Text>
+              <Box as={BiBone} fontSize={["lg", "0", "0", "0"]}/>
+            </Stack>             
+          </Box>
+       
+      </footer>
 
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-<style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          background-color: black;
-          color: grey;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
+     
+ 
     </Box>
   </div>
    
