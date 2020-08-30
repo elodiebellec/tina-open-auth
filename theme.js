@@ -12,7 +12,7 @@ const theme = {
     white: "#fffaff",
     black: "#000000",
     acert_blue: "#30bced",
-    acert_gray: "#303036",
+    acert_grey: "#303036",
     acert_red: "#fc5130",
     acert_darkblue1: "#008bca",
     acert_darkblue2: "#005e99",

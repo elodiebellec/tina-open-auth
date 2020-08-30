@@ -51,8 +51,14 @@ export default function Home({ file, preview }) {
       },
       { name: 'article3',
        component: 'textarea'
-      }
-    
+      },
+      { name: 'title4',
+       component: 'text'
+      },
+      { name: 'article4',
+       component: 'textarea'
+      },
+
     ],
   }
 
@@ -112,7 +118,7 @@ export default function Home({ file, preview }) {
         <Box 
           height="100%"
           width="100%"
-          p="5% 0% 10% 0%" 
+          p="5% 0% 5% 0%"
           display={{ md: "flex" }}
         >
           
@@ -139,7 +145,12 @@ export default function Home({ file, preview }) {
 
 
 {/*Article 2*/}
-        <Box height="100%" width="100%" p="5% 15% 5% 25%">
+        <Box
+          height="100%"
+          width="100%"
+          py="5%"
+          px={['0%', '20%', '25%']}
+          mt="5%">
           <Box width="100%">
             <Heading fontSize={["xl", "2xl", "4xl", "6xl"]}>     
               {data.title2}
@@ -155,7 +166,8 @@ export default function Home({ file, preview }) {
         <Box 
           height="100%"
           width="100%"
-          p="5% 0% 10% 0%" 
+          p="5% 0% 5% 0%"
+          mt="5%" 
           display={{ md: "flex" }}
         >
 {/*Image for middle and large screen size article 3*/}       
@@ -186,7 +198,9 @@ export default function Home({ file, preview }) {
         <Box 
           height="100%"
           width="100%"
-          p="5% 20% 5% 20%"           
+          py="5%"
+          px={['0%', '20%', '25%']}
+          mt="5%"           
         >
           <Box width="100%">
             <Heading
@@ -207,7 +221,7 @@ export default function Home({ file, preview }) {
 
 
 {/*Recommendation section for middle and large screen size*/}    
-      <Box w={[0, "100%", "100%", "100%"]} backgroundColor="#0f0f0F" borderWidth="1px" rounded="lg" borderColor="#0F0F0F" mt="15%">
+      <Box w={[0, "100%", "100%", "100%"]} borderWidth="1px" rounded="lg" borderColor="#0F0F0F" mt="15%">
         <Box mb={[0, "5%", "5%", "5%"]} display={{base:"none", lg:"block"}} textAlign="center">
             <Heading fontSize={[0, "xl", "3xl", "5xl"]}>They Recommend Us</Heading>
           </Box>
@@ -216,32 +230,32 @@ export default function Home({ file, preview }) {
           
         <Box display={{ md: "flex" }} fontSize={[0, "md", "lg", "xl"]} >
             
-            <Box p={[0, "2%", "2%", "2%"]}>
-              <Image src="https://pbs.twimg.com/profile_images/964468428856872960/Mo11mN9b_400x400.jpg" alt="Fabien" rounded="full" w="180px" mx="auto"></Image>
-              <Text textAlign="center" >Fabien</Text>
-              <Text textAlign="center" color="acert_grey">CEO</Text>
+            <Box p={[0, "2%", "2%", "2%"]} w="25%">
+              <Image src="https://pbs.twimg.com/profile_images/964468428856872960/Mo11mN9b_400x400.jpg" alt="Fabien" rounded="full" w="180px" mx="auto" mb="4%"></Image>
+              <Text textAlign="center" >Fabien Imbault</Text>
+              <Text textAlign="center" fontStyle="italic" mb="4%">CEO acert.io</Text>
               <Text textAlign="center">Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome.</Text>
             </Box>
 
-            <Box p={[0, "2%", "2%", "2%"]}>
-            <Image src="https://media-exp1.licdn.com/dms/image/C4D03AQHkci2rD306mw/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=fJ_iUaTVHajI120N_WG9_q_SXc1nN04CtgQZIsQoii8" alt="Smart trainee" rounded="full" w="180px" mx="auto"></Image>
+            <Box p={[0, "2%", "2%", "2%"]}  w="25%">
+            <Image src="https://media-exp1.licdn.com/dms/image/C4D03AQHkci2rD306mw/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=fJ_iUaTVHajI120N_WG9_q_SXc1nN04CtgQZIsQoii8" alt="Smart trainee" rounded="full" w="180px" mx="auto" mb="4%"></Image>
               <Text textAlign="center" >François</Text>
-              <Text textAlign="center" color="acert_grey">CEO</Text>
-              <Text textAlign="center">Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome.</Text>
+              <Text textAlign="center" fontStyle="italic" mb="4%">Trainee</Text>
+              <Text textAlign="center">This web site is cool but honestly, I prefer the other one: more work, more content and fewer dogs.</Text>
             </Box>
 
-            <Box p={[0, "2%", "2%", "2%"]} display={{base:"none", lg:"block"}}>
-              <Image src="\bernese-mountain-dog-wears-glasses.jpg" alt="Smart dog" rounded="full" w="180px" mx="auto"></Image>
+            <Box p={[0, "2%", "2%", "2%"]}  w="25%">
+              <Image src="\bernese-mountain-dog-wears-glasses.jpg" alt="Smart dog" rounded="full" w="180px" mx="auto" mb="4%"></Image>
               <Text textAlign="center" >Bandit</Text>
-              <Text textAlign="center" color="acert_grey">CEO</Text>
-              <Text textAlign="center">Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome.</Text>
+              <Text textAlign="center" fontStyle="italic" mb="4%">Smart dog</Text>
+              <Text textAlign="center">Woof, woof wof warf wofwof. Nextgen wof, wof woof! Woof woooof. Warf woof wif!</Text>
             </Box>
 
-            <Box p={[0, "2%", "2%", "2%"]}>
-              <Image src="\Kevin-Mitnick-crop.jpg" alt="Kevin Mitnick" rounded="full"  w="180px" mx="auto"></Image>
-              <Text textAlign="center" >Kevin</Text>
-              <Text textAlign="center" color="acert_grey">CEO</Text>
-              <Text textAlign="center">Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome.</Text>
+            <Box p={[0, "2%", "2%", "2%"]}  w="25%">
+              <Image src="\Kevin-Mitnick-crop.jpg" alt="Kevin Mitnick" rounded="full"  w="180px" mx="auto" mb="4%"></Image>
+              <Text textAlign="center" >Kevin Mitnick</Text>
+              <Text textAlign="center" fontStyle="italic" mb="4%">Famous hacker</Text>
+              <Text textAlign="center">I never managed to crack Fabien's password. I think this says it all.</Text>
             </Box>
             
           </Box>
@@ -263,9 +277,9 @@ export default function Home({ file, preview }) {
                  
           <Box display={{ md: "flex" }} mb={['5%', "0%", "0%", "0%"]}>
             <Box pr={['5%', "0%", "0%", "0%"]} lineHeight="110%" textAlign="center" >
-              <Image src="https://pbs.twimg.com/profile_images/964468428856872960/Mo11mN9b_400x400.jpg" alt="Fabien" rounded="full" p={['1%', "0%", "0%", "0%"]} width={['200px', "0%", "0%", "0%"]} m="auto"></Image>
-              <Text>Fabien</Text>
-              <Text color="acert_grey">CEO</Text>
+              <Image src="https://pbs.twimg.com/profile_images/964468428856872960/Mo11mN9b_400x400.jpg" alt="Fabien" rounded="full" p={['1%', "0%", "0%", "0%"]} width={['200px', "0%", "0%", "0%"]} mx="auto" mb="4%"></Image>
+              <Text>Fabien Imbault</Text>
+              <Text fontStyle="italic">CEO acert.io</Text>
             </Box>
             <Box>
               <Text>Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome.</Text>
@@ -274,34 +288,34 @@ export default function Home({ file, preview }) {
 
           <Box display={{ md: "flex" }} mb={['5%', "0%", "0%", "0%"]}>
             <Box pr={['5%', "0%", "0%", "0%"]} lineHeight="110%" textAlign="center" >
-              <Image src="https://media-exp1.licdn.com/dms/image/C4D03AQHkci2rD306mw/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=fJ_iUaTVHajI120N_WG9_q_SXc1nN04CtgQZIsQoii8" alt="Smart trainee" rounded="full" p={['1%', "0%", "0%", "0%"]} width={['200px', "0%", "0%", "0%"]} m="auto"></Image>
+              <Image src="https://media-exp1.licdn.com/dms/image/C4D03AQHkci2rD306mw/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=fJ_iUaTVHajI120N_WG9_q_SXc1nN04CtgQZIsQoii8" alt="Smart trainee" rounded="full" p={['1%', "0%", "0%", "0%"]} width={['200px', "0%", "0%", "0%"]} mx="auto" mb="4%"></Image>
               <Text>François</Text>
-              <Text color="acert_grey">CEO</Text>
+              <Text fontStyle="italic">Trainee</Text>
             </Box>
             <Box>
-              <Text>Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome.</Text>
+              <Text>This web site is cool but honestly, I prefer the other one: more work, more content and fewer dogs.</Text>
             </Box>
           </Box>
 
           <Box display={{ md: "flex" }} mb={['5%', "0%", "0%", "0%"]}>
             <Box pr={['5%', "0%", "0%", "0%"]} lineHeight="110%" textAlign="center" >
-              <Image src="\bernese-mountain-dog-wears-glasses.jpg" alt="Smart dog" rounded="full" p={['1%', "0%", "0%", "0%"]} width={['200px', "0%", "0%", "0%"]} m="auto"></Image>
+              <Image src="\bernese-mountain-dog-wears-glasses.jpg" alt="Smart dog" rounded="full" p={['1%', "0%", "0%", "0%"]} width={['200px', "0%", "0%", "0%"]} mx="auto" mb="4%"></Image>
               <Text>Bandit</Text>
-              <Text color="acert_grey">CEO</Text>
+              <Text fontStyle="italic">Smart dog</Text>
             </Box>
             <Box>
-              <Text>Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome.</Text>
+              <Text>Woof, woof wof warf wofwof. Nextgen wof, wof woof! Woof woooof. Warf woof wif!</Text>
             </Box>
           </Box>
 
           <Box display={{ md: "flex" }} mb={['5%', "0%", "0%", "0%"]}>
             <Box pr={['5%', "0%", "0%", "0%"]} lineHeight="110%" textAlign="center" >
-              <Image src="\Kevin-Mitnick-crop.jpg" alt="Kevin Mitnick" rounded="full" p={['1%', "0%", "0%", "0%"]} width={["200px", "0%", "0%", "0%"]} m="auto"></Image>
-              <Text>Kevin</Text>
-              <Text color="grey">CEO</Text>
+              <Image src="\Kevin-Mitnick-crop.jpg" alt="Kevin Mitnick" rounded="full" p={['1%', "0%", "0%", "0%"]} width={["200px", "0%", "0%", "0%"]} mx="auto" mb="4%"></Image>
+              <Text>Kevin Mitnick</Text>
+              <Text fontStyle="italic">Famous hacker</Text>
             </Box>
             <Box>
-              <Text>Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome, Nextgen is awsome.</Text>
+              <Text>I never managed to crack Fabien's password. I think this says it all.</Text>
             </Box>
           </Box>
 
@@ -309,7 +323,7 @@ export default function Home({ file, preview }) {
 
 
 {/*Small dog picture on the top of social medias*/}
-        <Box width={["65%", "40%", "25%"]} ml="auto" mr="auto" mt="10%" pr={["15%", "7%", "5%"]}>
+        <Box width={["65%", "40%", "25%"]} ml="auto" mr="auto" mt="15%" pr={["15%", "7%", "5%"]}>
           <Image src="https://ekladata.com/9XM16UlLM0ntfHrK9wGzOQxB3Dw.jpg" alt="Dog with red collar" /> 
         </Box>
 
